@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruit Agents | Hireonix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/recruit.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Hireonix</span>
+            </a>
+
+            <nav class="nav-main">
+                <ul class="nav-list">
+                    <li><a href="./recruit-agent.html">Recruit Agents</a></li>
+                    <li><a href="./find-oppertunity.html">Find Opportunities</a></li>
+                    <li><a href="./contact-us.html" class="cta-link">Get Started</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger-menu" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <button class="menu-close" id="menuClose" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-list">
+            <li><a href="./recruit-agent.html">Recruit Agents</a></li>
+            <li><a href="./find-oppertunity.html">Find Opportunities</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="./about-us.html">About Us</a></li>
+        </ul>
+        <div class="mobile-contact">
+            <a href="tel:07008489289" class="phone-link">
+                <i class="fas fa-phone"></i> 07008489289
+            </a>
+        </div>
+    </nav>
+    <div class="sap-container">
+        <!-- Hero Section -->
+        <section class="sap-hero">
+            <div class="sap-hero-content">
+                <h1>How To Recruit With Hireonix</h1>
+                <p>We believe that recruiting Sales Agents should be simple, quick and cost-effective.</p>
+                <p>We've built a simple process to fully understand your requirements - product, market and reward
+                    structure - and then build a recruitment campaign with you that we monitor and manage.</p>
+                <p>The campaign runs for six months and all for an incredible low cost of <span
+                        class="sap-hero-highlight">£399 plus VAT.</span></p>
+                <p><strong>Unbeatable!</strong></p>
+                <p>Fill in the form below and let's talk!</p>
+            </div>
+            <div class="sap-hero-image">
+                <img src="./image/about_sales_image.jpg" alt="Sales Team Meeting">
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="sap-process">
+            <h2 class="sap-process-title">How Recruiting With Hireonix Works</h2>
+            <div class="sap-process-grid">
+                <div class="sap-process-card">
+                    <div class="sap-process-card-number">1</div>
+                    <h3>We'll create your ad</h3>
+                    <p>We'll work with you to create an advocation guiding advert and build your campaign.</p>
+                </div>
+                <div class="sap-process-card">
+                    <div class="sap-process-card-number">2</div>
+                    <h3>Review your applicants</h3>
+                    <p>Review your applicants and recruit your best agents. We're with you every step of the way!</p>
+                </div>
+                <div class="sap-process-card">
+                    <div class="sap-process-card-number">3</div>
+                    <h3>Your advert goes live</h3>
+                    <p>Your advert goes live on our website and social media. Our adverts reach the right audience in
+                        social media and national job boards.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="sap-form-section">
+            <h2 class="sap-form-title">Tell Us About Your Requirements</h2>
+            <form class="sap-form">
+                <div class="sap-form-row">
+                    <div class="sap-form-group">
+                        <label for="name">Name*</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="sap-form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="sap-form-row">
+                    <div class="sap-form-group">
+                        <label for="phone">Phone*</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="sap-form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                </div>
+
+                <div class="sap-form-row">
+                    <div class="sap-form-group">
+                        <label for="website">Website</label>
+                        <input type="url" id="website" name="website">
+                    </div>
+                    <div class="sap-form-group">
+                        <label for="discount">Best time to discuss</label>
+                        <input type="text" id="discount" name="discount" placeholder="e.g., Morning, Afternoon">
+                    </div>
+                </div>
+
+                <div class="sap-form-row full">
+                    <div class="sap-form-group">
+                        <label for="opportunity">Tell us about the opportunity on offer</label>
+                        <textarea id="opportunity" name="opportunity"></textarea>
+                    </div>
+                </div>
+
+                <div class="sap-form-row full">
+                    <div class="sap-form-group">
+                        <label for="agents-detail">What will the agents be selling, the target market, the commission
+                            structure and what you're looking for in an Agent</label>
+                        <textarea id="agents-detail" name="agents-detail"></textarea>
+                    </div>
+                </div>
+
+                <div class="sap-form-row full">
+                    <div class="sap-form-group">
+                        <label for="challenges">Tell us about your current challenges, the problems some of our
+                            consultants will be happy to discuss</label>
+                        <textarea id="challenges" name="challenges"></textarea>
+                    </div>
+                </div>
+
+                <div class="sap-checkbox-group">
+                    <input type="checkbox" id="agree" name="agree">
+                    <label for="agree">I have read and accept the terms and conditions when using Hireonix
+                        website</label>
+                </div>
+
+                <button type="submit" class="sap-btn">LET'S TALK</button>
+            </form>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="sap-testimonials">
+            <h2 class="sap-testimonials-title">What Our Advertisers Have To Say</h2>
+            <div class="sap-carousel">
+                <div class="sap-carousel-container">
+                    <div class="sap-testimonial-card">
+                        <p class="sap-testimonial-text">"Just started to be one from that I've had a great response to
+                            the Ads circulating with a good volume of people… it's been very promising! So I am glad."
+                        </p>
+                        <p class="sap-testimonial-author">A.D - Phone Accessories</p>
+                    </div>
+                    <div class="sap-testimonial-card">
+                        <p class="sap-testimonial-text">"Thanks for all your help and again I was really given the sales
+                            calls. I've had some consultants and value agents they've been very supportive to using
+                            agents and love to hear the feedback!"</p>
+                        <p class="sap-testimonial-author">F.F - Accountancy Services</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sap-carousel-nav">
+                <button class="sap-carousel-btn">&lt;</button>
+                <button class="sap-carousel-btn">&gt;</button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="sap-about">
+            <div class="sap-about-image">
+                <img src="./image/about_sales_image.jpg" alt="About Hireonix">
+            </div>
+            <div class="sap-about-content">
+                <h2>About Hireonix</h2>
+                <p>At Hireonix we specialize in connecting businesses with motivated, commission-only Sales Agents who
+                    are driven by results and a desire to build long-term partnerships.</p>
+                <p>Our focus is on helping companies scale their sales operations while minimizing the risks
+                    traditionally associated with increasing a sales force.</p>
+                <p>Our in-depth understanding of diverse industries built over the last ten years enables us to advise
+                    and match businesses with agents who align with their goals, values, and target markets.</p>
+                <p>At Hireonix we are totally focused on helping companies grow sales and build sustainable businesses.
+                </p>
+                <button class="sap-about-btn">Find Out More</button>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="./about-us.html">About Us</a></li>
+                        <li><a href="./contact-us.html">Contact Us</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>For Agents</h4>
+                    <ul>
+                        <li><a href="./find-oppertunity.html">Find Opportunities</a></li>
+                        <li><a href="browse-roles.html">Browse Roles</a></li>
+                        <li><a href="guides.html">Guides</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>For Companies</h4>
+                    <ul>
+                        <li><a href="./recruit-agent.html">Recruit Agents</a></li>
+                        <li><a href="./find-oppertunities.html">Post Opportunity</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hireonix. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="./terms-and-condition.html">Terms of Service</a></li>
+                    <li><a href="cookie.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY PHONE BUTTON -->
+    <a href="tel:07008489289" class="sticky-phone">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuClose = document.getElementById('menuClose');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-list a');
+
+        // Toggle mobile menu
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu
+        menuClose.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        });
+
+        // Close menu when link is clicked
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+    <script>
+        // Form submission handler
+        document.querySelector('.sap-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your interest! We will contact you soon.');
+            this.reset();
+        });
+
+        // Carousel navigation
+        const carouselBtns = document.querySelectorAll('.sap-carousel-btn');
+        let currentSlide = 0;
+
+        carouselBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const container = document.querySelector('.sap-carousel-container');
+                const cards = container.querySelectorAll('.sap-testimonial-card');
+                const totalCards = cards.length;
+
+                if (this.innerHTML.includes('&lt;')) {
+                    currentSlide = (currentSlide - 1 + totalCards) % totalCards;
+                } else {
+                    currentSlide = (currentSlide + 1) % totalCards;
+                }
+
+                container.style.animation = 'none';
+                setTimeout(() => {
+                    container.style.animation = 'fadeIn 0.5s ease-out';
+                }, 10);
+            });
+        });
+
+        // Smooth scroll effect on page load
+        window.addEventListener('load', function () {
+            document.body.style.animation = 'fadeIn 0.5s ease-out';
+        });
+    </script>
+</body>
+
+</html>

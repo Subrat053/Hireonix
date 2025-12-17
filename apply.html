@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apply | Sales Agency Opportunity</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      background-color:#f5fff7;
+      color:#133322;
+    }
+    .apply-wrapper{
+      max-width:1200px;
+      margin:0 auto;
+      padding:24px 20px 48px;
+      display:grid;
+      grid-template-columns:minmax(0,1.1fr) minmax(0,1.3fr);
+      gap:40px;
+      min-height:100vh;
+    }
+    .apply-back{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      font-size:14px;
+      color:#0c5720;
+      text-decoration:none;
+      margin-bottom:20px;
+      font-weight:500;
+    }
+    .apply-back span:first-child{
+      font-size:16px;
+    }
+    .apply-panel{
+      background:#61a5e4;
+      color:#ffffff;
+      border-radius:8px;
+      padding:24px 20px 28px;
+      box-shadow:0 8px 24px rgba(0,0,0,.16);
+    }
+    .apply-panel h1{
+      font-size:26px;
+      margin-bottom:18px;
+    }
+    .apply-form-group{
+      margin-bottom:16px;
+    }
+    .apply-label{
+      display:block;
+      font-size:14px;
+      margin-bottom:4px;
+      font-weight:500;
+    }
+    .apply-input,
+    .apply-textarea{
+      width:100%;
+      padding:11px 12px;
+      border-radius:4px;
+      border:1px solid #4e524fcf;
+      font-size:14px;
+      font-family:inherit;
+      outline:none;
+      transition:border-color .18s ease,box-shadow .18s ease;
+    }
+    .apply-input:focus,
+    .apply-textarea:focus{
+      border-color:#369ec1;
+      box-shadow:0 0 0 3px rgba(67, 63, 63, 0.323);
+      background:#ffffff;
+    }
+    .apply-textarea{
+      min-height:120px;
+      resize:vertical;
+    }
+    .apply-required{
+      color:#ffebc2;
+      font-size:12px;
+      margin-top:2px;
+    }
+    .apply-submit{
+      margin-top:10px;
+      width:100%;
+      padding:12px 16px;
+      border-radius:999px;
+      border:none;
+      background:#4f15f7;
+      color:#ffffff;
+      font-weight:600;
+      font-size:15px;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+      cursor:pointer;
+      transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+    }
+    .apply-submit:hover{
+      transform:translateY(-1px);
+      box-shadow:0 10px 22px rgba(11,94,35,.45);
+      background:linear-gradient(135deg,#0b5e23,#0f7a2e);
+    }
+    .apply-submit:active{
+      transform:translateY(0);
+      box-shadow:0 4px 10px rgba(11,94,35,.35);
+    }
+    .apply-status{
+      margin-top:10px;
+      font-size:13px;
+      display:none;
+    }
+    .apply-status.error{color:#ffe9e9}
+    .apply-status.success{color:#e9ffe9}
+    .job-panel{
+      background:#ffffff;
+      border-radius:8px;
+      padding:28px 26px;
+      box-shadow:0 8px 24px rgba(0,0,0,.08);
+      border:1px solid #e0f0e4;
+    }
+    .job-badge{
+      display:inline-block;
+      padding:4px 10px;
+      border-radius:999px;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.09em;
+      color:#4f15f7;
+      background:#e7ddf7;
+      margin-bottom:10px;
+      font-weight:600;
+    }
+    .job-title{
+      font-size:22px;
+      margin-bottom:10px;
+      color:#123822;
+    }
+    .job-company{
+      font-size:14px;
+      margin-bottom:18px;
+      color:#30594a;
+      font-weight:500;
+    }
+    .job-body p{
+      font-size:14px;
+      margin-bottom:10px;
+      line-height:1.6;
+      color:#3a5b46;
+    }
+    .job-link{
+      color:#4f15f7;
+      text-decoration:underline;
+    }
+    @media (max-width:900px){
+      .apply-wrapper{
+        grid-template-columns:1fr;
+        padding-top:16px;
+      }
+      .job-panel{
+        order:1;
+      }
+      .apply-panel{
+        order:2;
+      }
+    }
+    @media (max-width:600px){
+      .apply-panel h1{font-size:22px}
+      .job-title{font-size:19px}
+    }
+  </style>
+</head>
+<body>
+
+<div class="apply-wrapper">
+
+  <!-- LEFT: form -->
+  <section class="apply-panel">
+    <a href="javascript:history.back()" class="apply-back">
+      <span>←</span><span>Back</span>
+    </a>
+
+    <h1>Apply</h1>
+
+    <form id="applyForm"
+          method="post"
+          action="/send-application"> <!-- change to your server URL -->
+      <input type="hidden" name="jobId" id="jobIdField">
+      <input type="hidden" name="jobTitle" id="jobTitleField">
+
+      <div class="apply-form-group">
+        <label class="apply-label" for="name">Name*</label>
+        <input class="apply-input" id="name" name="name" required>
+        <!-- <div class="apply-required">Please enter your full name.</div> -->
+      </div>
+
+      <div class="apply-form-group">
+        <label class="apply-label" for="email">Email Address*</label>
+        <input class="apply-input" id="email" name="email" type="email" required>
+        <!-- <div class="apply-required">Used so the admin can contact you.</div> -->
+      </div>
+
+      <div class="apply-form-group">
+        <label class="apply-label" for="phone">Phone Number*</label>
+        <input class="apply-input" id="phone" name="phone" required>
+      </div>
+
+      <div class="apply-form-group">
+        <label class="apply-label" for="message">Further Information</label>
+        <textarea class="apply-textarea" id="message" name="message"
+                  placeholder="Tell us briefly about your experience and why you are interested in this opportunity."></textarea>
+      </div>
+
+      <button class="apply-submit" type="submit">Submit Application</button>
+      <div class="apply-status" id="applyStatus"></div>
+    </form>
+  </section>
+
+  <!-- RIGHT: job details -->
+  <section class="job-panel" id="jobPanel">
+    <!-- filled by JS -->
+  </section>
+
+</div>
+
+<script>
+  // Simple job data – one entry per slug used in ?job=
+  const JOBS = {
+    "engineering-components-great-repeat-business": {
+      badge: "Featured Opportunity",
+      title: "Engineering Components – Great Repeat Business",
+      company: "Dobson Gaskets",
+      paragraphs: [
+        "Dobson Gaskets is a family‑run gasket manufacturer with over 60 years’ experience. We supply quality gaskets to distilleries, valve manufacturers and repairers, pump companies, heat exchanger specialists and many other sectors.",
+        "Our operations are ISO 9001:2015 certified and we manufacture gaskets and sealing components to stringent international standards.",
+        "We hold a strong, long‑standing reputation in our industry by combining traditional engineering values with modern manufacturing technology, leading to strong repeat business from our customers.",
+        "You can find full details of our capabilities at www.dobsongasket.com."
+      ],
+      website: "https://www.dobsongasket.com"
+    },
+    "telesales-into-construction-sector": {
+      badge: "Agency Opportunity",
+      title: "Telesales into Construction Sector – Commission for Appointments",
+      company: "Construction Solutions Provider",
+      paragraphs: [
+        "Join a growing provider helping construction firms move from messy paper‑based inspections to streamlined digital workflows.",
+        "You will be responsible for booking qualified appointments with decision makers and earning commission for each successful meeting.",
+        "This is ideal for experienced telesales agents with an existing construction contact base."
+      ]
+    },
+    "commission-sales-partner-kyc-aml": {
+      badge: "Agency Opportunity",
+      title: "Commission Sales Partner – KYC, AML & Cybersecurity Solutions",
+      company: "Compliance & Risk Technology Vendor",
+      paragraphs: [
+        "Represent a portfolio of KYC, AML and cybersecurity solutions selling into financial institutions and regulated businesses.",
+        "You will work alongside in‑house presales and implementation teams while earning attractive recurring commission."
+      ]
+    }
+    // add more entries matching your slugs
+  };
+
+  function getJobIdFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("job");
+  }
+
+  function renderJob() {
+    const jobId = getJobIdFromUrl();
+    const job = JOBS[jobId] || null;
+    const panel = document.getElementById("jobPanel");
+
+    if (!job) {
+      panel.innerHTML =
+        "<p style='font-size:15px;color:#3a5b46'>Opportunity not found. Please return to the previous page and try again.</p>";
+      return;
+    }
+
+    // fill hidden fields for admin
+    document.getElementById("jobIdField").value = jobId;
+    document.getElementById("jobTitleField").value = job.title;
+
+    let html = "";
+    html += "<div class='job-badge'>" + job.badge + "</div>";
+    html += "<h2 class='job-title'>" + job.title + "</h2>";
+    html += "<div class='job-company'>" + job.company + "</div>";
+    html += "<div class='job-body'>";
+    job.paragraphs.forEach(p => {
+      html += "<p>" + p + "</p>";
+    });
+    if (job.website) {
+      html += "<p>Learn more at <a class='job-link' href='" + job.website +
+              "' target='_blank' rel='noopener'>"+ job.website +"</a>.</p>";
+    }
+    html += "</div>";
+
+    panel.innerHTML = html;
+  }
+
+  // Basic client-side validation feedback
+  const form = document.getElementById("applyForm");
+  const statusEl = document.getElementById("applyStatus");
+
+  form.addEventListener("submit", function (e) {
+    // browser built‑in validation first
+    if (!form.checkValidity()) {
+      e.preventDefault();
+      statusEl.textContent = "Please fill in all required fields correctly before submitting.";
+      statusEl.className = "apply-status error";
+      statusEl.style.display = "block";
+      return;
+    }
+    // allow normal submit to server; show quick message
+    statusEl.textContent = "Submitting your application...";
+    statusEl.className = "apply-status success";
+    statusEl.style.display = "block";
+    // no preventDefault -> form posts to backend (admin)
+  });
+
+  renderJob();
+</script>
+
+</body>
+</html>

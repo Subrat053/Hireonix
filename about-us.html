@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruit a Sales Agent | Hireonix</title>
+
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/about-us.css">
+    <link rel="stylesheet" href="css/about-us-animations.css">
+</head>
+
+<body class="about-us-page">
+    
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+            <a href="./index.html" class="logo">
+                <span class="logo-text">Hireonix</span>
+            </a>
+
+            <nav class="nav-main">
+                <ul class="nav-list">
+                    <li><a href="./recruit-agent.html">Recruit Agents</a></li>
+                    <li><a href="./find-oppertunity.html">Find Opportunities</a></li>
+                    <li><a href="contact-us.html" class="cta-link">Get Started</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger-menu" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <button class="menu-close" id="menuClose" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-list">
+            <li><a href="./recruit-agent.html">Recruit Agents</a></li>
+            <li><a href="./find-oppertunity.html">Find Opportunities</a></li>
+            <li><a href="./contact-us.html">Contact Us</a></li>
+            <li><a href="./about-us.html">About Us</a></li>
+        </ul>
+        <div class="mobile-contact">
+            <a href="tel:07008489289" class="phone-link">
+                <i class="fas fa-phone"></i> 07008489289
+            </a>
+        </div>
+    </nav>
+
+    <!-- How To Recruit Section -->
+    <section class="au-how-to-section">
+        <div class="au-container">
+            <div class="au-how-to-card au-fade-in">
+                <div class="au-how-to-content">
+                    <h2 class="au-section-title">How To Recruit With Sales Agents Plus</h2>
+                    <p class="au-section-text">
+                        We believe that recruiting Sales Agents should be simple, quick and cost effective.
+                    </p>
+                    <p class="au-section-text">
+                        We've built a simple process to fully understand your requirements - publish your ad and reward
+                        your agents - track them build a recruitment campaign with you for success and reliability.
+                    </p>
+                    <p class="au-section-text">
+                        The campaign can live for six months and all for an incredible low cost of £399 per VAC.
+                    </p>
+                    <h3 class="au-highlight-title">Unbeatable!</h3>
+                    <p class="au-highlight-text">Fill in the form below and let's talk!</p>
+                </div>
+                <div class="au-how-to-image">
+                    <div class="au-image-placeholder">
+                        <img src="./image/pexels-anastasia-shuraeva-7647207.jpg" alt="">
+                    </div>
+                </div>
+
+    </section>
+
+    <!-- How Recruiting Works Section -->
+    <section class="au-works-section">
+        <div class="au-container">
+            <h2 class="au-section-heading">How Recruiting With Sales Agents Plus Works</h2>
+            <div class="au-works-grid">
+                <!-- Card 1 -->
+                <div class="au-work-card au-slide-up" style="--delay: 0s">
+                    <div class="au-card-number">1</div>
+                    <div class="au-card-content">
+                        <h3>We'll create your ad</h3>
+                        <p>We create a custom ad to attract top-tier agents specifically for your requirements.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="au-work-card au-slide-up" style="--delay: 0.1s">
+                    <div class="au-card-number">2</div>
+                    <div class="au-card-content">
+                        <h3>Your advert goes live</h3>
+                        <p>Your ad goes live across our network, reaching thousands of potential sales agents.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="au-work-card au-slide-up" style="--delay: 0.2s">
+                    <div class="au-card-number">3</div>
+                    <div class="au-card-content">
+                        <h3>Review your applicants</h3>
+                        <p>You review qualified applicants and select the best fit for your team.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="au-work-card au-slide-up au-featured" style="--delay: 0.3s">
+                    <div class="au-card-number">4</div>
+                    <div class="au-card-content">
+                        <h3>Fill out our simple form</h3>
+                        <p>Fill out our simple form with your requirements and we'll handle the rest.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements Form Section -->
+    <section class="au-form-section">
+        <div class="au-container">
+            <h2 class="au-form-title">Tell Us About Your Requirements</h2>
+            <form class="au-form" id="requirementsForm">
+                <div class="au-form-row">
+                    <div class="au-form-group au-fade-in" style="--delay: 0s">
+                        <label for="name" class="au-form-label">Name</label>
+                        <input type="text" id="name" name="name" class="au-form-input" required>
+                    </div>
+                    <div class="au-form-group au-fade-in" style="--delay: 0.05s">
+                        <label for="email" class="au-form-label">Email</label>
+                        <input type="email" id="email" name="email" class="au-form-input" required>
+                    </div>
+                </div>
+
+                <div class="au-form-row">
+                    <div class="au-form-group au-fade-in" style="--delay: 0.1s">
+                        <label for="phone" class="au-form-label">Phone</label>
+                        <input type="tel" id="phone" name="phone" class="au-form-input">
+                    </div>
+                    <div class="au-form-group au-fade-in" style="--delay: 0.15s">
+                        <label for="company" class="au-form-label">Company</label>
+                        <input type="text" id="company" name="company" class="au-form-input">
+                    </div>
+                </div>
+
+                <div class="au-form-group au-fade-in" style="--delay: 0.2s">
+                    <label for="requirements" class="au-form-label">What are your agent requirements?</label>
+                    <textarea id="requirements" name="requirements" class="au-form-textarea" rows="6"
+                        required></textarea>
+                </div>
+
+                <div class="au-form-checkbox au-fade-in" style="--delay: 0.25s">
+                    <input type="checkbox" id="terms" name="terms">
+                    <span for="terms" class="au-checkbox-label">I would like to receive information and updates about
+                        Sales Agents Plus</span>
+                </div>
+
+                <button type="submit" class="au-btn-submit au-fade-in" style="--delay: 0.3s">
+                    <span class="au-btn-text">LET'S TALK</span>
+                    <span class="au-btn-arrow">→</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="au-testimonials-section">
+        <div class="au-container">
+            <h2 class="au-testimonials-title">What Our Advertisers Have To Say</h2>
+            <div class="au-testimonials-carousel">
+                <button class="au-carousel-btn au-carousel-prev" aria-label="Previous testimonial">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+
+                <div class="au-testimonials-wrapper">
+                    <div class="au-testimonial-card au-testimonial-active">
+                        <p class="au-testimonial-text">"Great platform and very helpful team. Would definitely
+                            recommend."</p>
+                        <p class="au-testimonial-down">
+                            <strong>S.S. - House Accountants</strong>
+                        </p>
+                    </div>
+                    <div class="au-testimonial-card">
+                        <p class="au-testimonial-text">"Excellent service and support throughout the recruitment
+                            process. Highly satisfied with the results."</p>
+                        <p class="au-testimonial-down">
+                            <strong>P.J. - Accountancy Services</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <button class="au-carousel-btn au-carousel-next" aria-label="Next testimonial">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Company Section -->
+    <section class="au-company-section">
+        <div class="au-container">
+            <div class="au-company-wrapper">
+                <div class="au-company-image au-fade-in">
+                    <div class="au-image-placeholder-large">
+                        <img src="./image/pexels-anastasia-shuraeva-7647207.jpg" alt="">
+                    </div>
+                </div>
+                <div class="au-company-content au-fade-in">
+                    <h2 class="au-company-title">About Sales Agents Plus</h2>
+                    <p class="au-company-text">
+                        All Sales Agents Plus matches businesses with motivated, commission-only Sales Agents who are
+                        driven by results and desire to build lasting client partnerships.
+                    </p>
+                    <p class="au-company-text">
+                        Our focus is on helping companies scale their sales operations while maintaining the risk
+                        traditionally associated with employing a sales force.
+                    </p>
+                    <p class="au-company-text">
+                        Our in-depth understanding of diverse industries means we have the tools and experience to
+                        ensure we can advise all types of business on achieving their goals, values, and target markets.
+                    </p>
+                    <p class="au-company-text">
+                        At Sales Agents Plus we are totally focused on helping companies grow sales and build
+                        sustainable businesses.
+                    </p>
+                    <a href="#" class="au-btn-primary">Find Out More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="./about-us.html">About Us</a></li>
+                        <li><a href="./contact-us.html">Contact Us</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>For Agents</h4>
+                    <ul>
+                        <li><a href="./find-oppertunity.html">Find Opportunities</a></li>
+                        <li><a href="browse-roles.html">Browse Roles</a></li>
+                        <li><a href="guides.html">Guides</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>For Companies</h4>
+                    <ul>
+                        <li><a href="./recruit-agent.html">Recruit Agents</a></li>
+                        <li><a href="./find-oppertunities.html">Post Opportunity</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hireonix. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="./terms-and-condition.html">Terms of Service</a></li>
+                    <li><a href="cookie.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY PHONE BUTTON -->
+    <a href="tel:07008489289" class="sticky-phone">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuClose = document.getElementById('menuClose');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-list a');
+
+        // Toggle mobile menu
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu
+        menuClose.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        });
+
+        // Close menu when link is clicked
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+
+
+    <script>
+        /* ===================================
+   ABOUT-US PAGE JAVASCRIPT
+   Handles interactions and carousel
+   =================================== */
+
+        document.addEventListener('DOMContentLoaded', function () {
+            initCarousel();
+            initFormHandling();
+            observeElements();
+        });
+
+        /* ===== CAROUSEL FUNCTIONALITY ===== */
+        function initCarousel() {
+            const prevBtn = document.querySelector('.au-carousel-prev');
+            const nextBtn = document.querySelector('.au-carousel-next');
+            const cards = document.querySelectorAll('.au-testimonial-card');
+
+            if (!prevBtn || !nextBtn || cards.length === 0) return;
+
+            let currentIndex = 0;
+
+            function showCard(index) {
+                cards.forEach((card, i) => {
+                    card.classList.remove('au-testimonial-active');
+                    if (i === index) {
+                        card.classList.add('au-testimonial-active');
+                    }
+                });
+            }
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+                showCard(currentIndex);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % cards.length;
+                showCard(currentIndex);
+            });
+
+            // Auto-advance carousel every 6 seconds
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % cards.length;
+                showCard(currentIndex);
+            }, 6000);
+        }
+
+        /* ===== FORM HANDLING ===== */
+        function initFormHandling() {
+            const form = document.getElementById('requirementsForm');
+
+            if (!form) return;
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Get form data
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    company: document.getElementById('company').value,
+                    requirements: document.getElementById('requirements').value,
+                    newsletter: document.getElementById('terms').checked
+                };
+
+                // Validate required fields
+                if (!formData.name || !formData.email || !formData.requirements) {
+                    showNotification('Please fill in all required fields', 'error');
+                    return;
+                }
+
+                // Validate email format
+                if (!isValidEmail(formData.email)) {
+                    showNotification('Please enter a valid email address', 'error');
+                    return;
+                }
+
+                // Log form data (in production, this would send to a server)
+                console.log('Form submitted:', formData);
+
+                // Show success message
+                showNotification('Thank you! We will be in touch soon.', 'success');
+
+                // Reset form
+                form.reset();
+
+                // Optional: Send to server
+                // sendFormToServer(formData);
+            });
+
+            // Real-time input validation
+            const emailInput = document.getElementById('email');
+            if (emailInput) {
+                emailInput.addEventListener('blur', function () {
+                    if (this.value && !isValidEmail(this.value)) {
+                        this.style.borderColor = '#ef4444';
+                    } else {
+                        this.style.borderColor = '#e5e7eb';
+                    }
+                });
+            }
+        }
+
+        /* ===== EMAIL VALIDATION ===== */
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        /* ===== NOTIFICATION SYSTEM ===== */
+        function showNotification(message, type = 'info') {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `au-notification au-notification-${type}`;
+            notification.textContent = message;
+
+            // Add styles
+            Object.assign(notification.style, {
+                position: 'fixed',
+                top: '20px',
+                right: '20px',
+                padding: '16px 24px',
+                borderRadius: '8px',
+                fontSize: '14px',
+                fontWeight: '500',
+                zIndex: '9999',
+                animation: 'auSlideInRight 0.4s ease-out'
+            });
+
+            // Set type-specific styles
+            if (type === 'success') {
+                Object.assign(notification.style, {
+                    backgroundColor: '#d1fae5',
+                    color: '#065f46',
+                    border: '1px solid #6ee7b7'
+                });
+            } else if (type === 'error') {
+                Object.assign(notification.style, {
+                    backgroundColor: '#fee2e2',
+                    color: '#991b1b',
+                    border: '1px solid #fca5a5'
+                });
+            } else {
+                Object.assign(notification.style, {
+                    backgroundColor: '#dbeafe',
+                    color: '#1e3a8a',
+                    border: '1px solid #93c5fd'
+                });
+            }
+
+            document.body.appendChild(notification);
+
+            // Remove after 4 seconds
+            setTimeout(() => {
+                notification.style.animation = 'auFadeOut 0.4s ease-out forwards';
+                setTimeout(() => notification.remove(), 400);
+            }, 4000);
+        }
+
+        /* ===== INTERSECTION OBSERVER FOR ANIMATIONS ===== */
+        function observeElements() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Trigger animation by ensuring it's visible
+                        entry.target.style.opacity = '1';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            // Observe fade-in elements
+            document.querySelectorAll('.au-fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Observe slide-up elements
+            document.querySelectorAll('.au-slide-up').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        /* ===== SMOOTH SCROLL TO FORM ===== */
+        function scrollToForm() {
+            const form = document.getElementById('requirementsForm');
+            if (form) {
+                form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        /* ===== KEYBOARD NAVIGATION ===== */
+        document.addEventListener('keydown', function (event) {
+            const prevBtn = document.querySelector('.au-carousel-prev');
+            const nextBtn = document.querySelector('.au-carousel-next');
+
+            // Arrow keys for carousel navigation
+            if (event.key === 'ArrowLeft' && prevBtn) {
+                prevBtn.click();
+            } else if (event.key === 'ArrowRight' && nextBtn) {
+                nextBtn.click();
+            }
+
+            // ESC to close notifications
+            if (event.key === 'Escape') {
+                const notifications = document.querySelectorAll('.au-notification');
+                notifications.forEach(notif => notif.remove());
+            }
+        });
+
+        /* ===== RESPONSIVE MENU TOGGLE (Future Enhancement) ===== */
+        function toggleMobileMenu() {
+            const menu = document.querySelector('.au-mobile-menu');
+            if (menu) {
+                menu.classList.toggle('au-mobile-menu-open');
+            }
+        }
+
+        /* ===== FORM FIELD ANIMATION ===== */
+        function initFormFieldAnimations() {
+            const inputs = document.querySelectorAll('.au-form-input, .au-form-textarea');
+
+            inputs.forEach(input => {
+                input.addEventListener('focus', function () {
+                    this.parentElement.classList.add('au-field-focused');
+                });
+
+                input.addEventListener('blur', function () {
+                    if (!this.value) {
+                        this.parentElement.classList.remove('au-field-focused');
+                    }
+                });
+
+                // Trigger focus class if field has value on load
+                if (input.value) {
+                    input.parentElement.classList.add('au-field-focused');
+                }
+            });
+        }
+
+        /* ===== LAZY LOADING IMAGES ===== */
+        function initLazyLoading() {
+            const images = document.querySelectorAll('img[data-src]');
+
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src;
+                            img.classList.add('au-loaded');
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+
+                images.forEach(img => imageObserver.observe(img));
+            }
+        }
+
+        /* ===== ANALYTICS TRACKING (Optional) ===== */
+        function trackEvent(eventName, eventData = {}) {
+            if (window.gtag) {
+                gtag('event', eventName, eventData);
+            }
+            console.log('Event tracked:', eventName, eventData);
+        }
+
+        /* ===== UTILITY: DEBOUNCE ===== */
+        function debounce(func, delay) {
+            let timeoutId;
+            return function (...args) {
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(() => func.apply(this, args), delay);
+            };
+        }
+
+        /* ===== UTILITY: THROTTLE ===== */
+        function throttle(func, limit) {
+            let lastRun = 0;
+            return function (...args) {
+                const now = Date.now();
+                if (now - lastRun >= limit) {
+                    func.apply(this, args);
+                    lastRun = now;
+                }
+            };
+        }
+
+        /* ===== SCROLL EFFECT ON HERO ===== */
+        function initHeroParallax() {
+            const hero = document.querySelector('.au-hero-section');
+            const decoration = document.querySelector('.au-hero-decoration');
+
+            if (!hero || !decoration) return;
+
+            const parallaxEffect = throttle(() => {
+                const scrollPosition = window.scrollY;
+                decoration.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+            }, 30);
+
+            window.addEventListener('scroll', parallaxEffect);
+        }
+
+        /* ===== INITIALIZE ALL FUNCTIONS ON LOAD ===== */
+        document.addEventListener('DOMContentLoaded', function () {
+            initFormFieldAnimations();
+            initLazyLoading();
+            initHeroParallax();
+        });
+
+        /* ===== EXPORT FUNCTIONS FOR EXTERNAL USE ===== */
+        window.AboutUsPage = {
+            scrollToForm: scrollToForm,
+            showNotification: showNotification,
+            toggleMobileMenu: toggleMobileMenu,
+            trackEvent: trackEvent
+        };
+    </script>
+</body>
+
+</html>

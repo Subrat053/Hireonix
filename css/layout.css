@@ -1,0 +1,495 @@
+
+/* ===== RESET & BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===== HEADER STYLES ===== */
+header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(
+    135deg,
+    rgb(50, 94, 198) 0%,
+    rgba(26, 104, 115, 1) 100%
+  );
+  color: #000;
+  z-index: 1000;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.7rem;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-text {
+  background: white;
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: 0.2rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-left: 0.75rem;
+}
+
+/* Desktop Navigation */
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-list a {
+  color: white;
+  font-size: 1.10rem;
+  font-weight: 400;
+  position: relative;
+  transition: color 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-list a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: yellow;
+  transition: width 50ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-list a:hover {
+  color: yellow;
+}
+
+.nav-list a:hover::after {
+  width: 100%;
+}
+
+.cta-link {
+  background: white;
+  color: #000 !important;
+  padding: 0.625rem 1.5rem;
+  border-radius: 9999px;
+  transition: all 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta-link:hover {
+  color: white !important;
+  font-weight: 500;
+  background: rgb(29, 74, 235);
+  transform: translateY(-2px);
+}
+
+.cta-link::after {
+  display: none !important;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 6px;
+  padding: 0.25rem;
+}
+
+.hamburger-menu span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  border-radius: 6px;
+  transition: all 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hamburger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(12px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-12px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    rgb(50, 94, 198) 0%,
+    rgba(26, 104, 115, 1) 100%
+  );
+  padding: 5rem 2rem 2rem;
+  transition: right 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.menu-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.menu-close:hover {
+  transform: rotate(90deg);
+}
+
+.mobile-nav-list li {
+  margin: 1.25rem 0;
+}
+
+.mobile-nav-list a {
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 500;
+  display: block;
+  padding: 0.625rem 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-list a:hover {
+  color: rgb(114, 248, 25);
+}
+
+.phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  background: rgb(226, 245, 55);
+  color: #000;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: background 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.phone-link:hover {
+  background: rgb(114, 248, 25);
+}
+
+/* ===== FOOTER STYLES ===== */
+footer {
+  background: linear-gradient(
+    135deg,
+    rgb(50, 94, 198) 0%,
+    rgba(26, 104, 115, 1) 100%
+  );
+  color: #000;
+  padding: 3rem 2rem 1rem;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-col h4 {
+  font-size: 1.375rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-col a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-block;
+}
+
+.footer-col a:hover {
+  color: rgb(114, 248, 25);
+  transform: translateX(5px);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  transition: all 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.social-links a:hover {
+  background: rgb(114, 248, 25);
+  transform: translateY(-3px) scale(1.1);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.footer-bottom p {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer-links a {
+  font-size: 1rem;
+  opacity: 0.8;
+  transition: opacity 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: rgb(15, 30, 129);
+}
+
+/* Sticky Phone Button */
+.sticky-phone {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: linear-gradient(135deg, rgb(119, 220, 17), rgb(53, 119, 82));
+  color: #000;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 100;
+  animation: float 3s ease-in-out infinite;
+}
+
+.sticky-phone:hover {
+  transform: scale(1.15);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ===== TABLET MEDIA QUERY ===== */
+@media (max-width: 1024px) {
+  .header-content {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-list {
+    gap: 1.5rem;
+  }
+
+  .nav-list a {
+    font-size: 1rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .footer-col h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ===== MOBILE MEDIA QUERY ===== */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 1rem 1rem;
+  }
+
+  .nav-main {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .logo-text {
+    font-size: 1.25rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-links {
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .sticky-phone {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+}
+
+/* ===== SMALL MOBILE MEDIA QUERY ===== */
+@media (max-width: 480px) {
+  .header-content {
+    padding: 0.75rem 0.75rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .logo-text {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+  }
+
+  .hamburger-menu span {
+    width: 20px;
+    height: 2.5px;
+  }
+
+  .mobile-menu {
+    padding: 4rem 1.25rem 1.5rem;
+  }
+
+  .mobile-nav-list a {
+    font-size: 1rem;
+  }
+
+  .phone-link {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .footer-grid {
+    gap: 1.25rem;
+  }
+
+  .footer-col h4 {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-col ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-bottom p,
+  .footer-links a {
+    font-size: 0.875rem;
+  }
+
+  .social-links {
+    gap: 0.75rem;
+  }
+
+  .social-links a {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 0.875rem;
+  }
+
+  .sticky-phone {
+    bottom: 1rem;
+    right: 1rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 0.875rem;
+  }
+}
