@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/index.css">
-    
+    <!-- For ICO file -->
+    <link rel="icon" type="image/x-icon" href="./image/favicon.png">
+
 </head>
 
 <body>
@@ -110,8 +112,13 @@
 
 
                     <button type="submit" class="btn-submit">Send Message</button>
-                    <div class="form-status" id="formStatus"></div>
+                    <div class="form-status" id="successModal">
+
+                        <p style="text-align: center; padding: 10px; color: black;">✅ Thank you for contacting us. We will get back to you soon!</p>
+                    </div>
                 </form>
+                <!-- <div id="successModal" style="display:none;">
+                </div> -->
             </div>
         </div>
     </section>
@@ -208,6 +215,7 @@
             }
         });
     </script>
+    <script src="./js/mail_script.js"></script>
 </body>
 
 </html>

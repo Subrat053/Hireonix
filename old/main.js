@@ -1,5 +1,5 @@
 // ========================================
-// SALES AGENTS PLUS - MAIN JAVASCRIPT
+// Hireonix - MAIN JAVASCRIPT
 // ========================================
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -284,4 +284,4 @@ document.addEventListener('keydown', function(e) {
 });
 
 // Log initialization
-console.log('Sales Agents Plus - Application Initialized Successfully ✓');
+console.log('Hireonix - Application Initialized Successfully ✓');

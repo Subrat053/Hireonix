@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/recruit.css">
+    <!-- For ICO file -->
+    <link rel="icon" type="image/x-icon" href="./image/favicon.png">
 </head>
 
 <body>
@@ -121,8 +123,8 @@
                         <input type="url" id="website" name="website">
                     </div>
                     <div class="sap-form-group">
-                        <label for="discount">Best time to discuss</label>
-                        <input type="text" id="discount" name="discount" placeholder="e.g., Morning, Afternoon">
+                        <label for="best_time">Best time to discuss</label>
+                        <input type="text" id="best_time" name="best_time" placeholder="e.g., Morning, Afternoon">
                     </div>
                 </div>
 
@@ -135,16 +137,16 @@
 
                 <div class="sap-form-row full">
                     <div class="sap-form-group">
-                        <label for="agents-detail">What will the agents be selling, the target market, the commission
+                        <label for="agents_detail">What will the agents be selling, the target market, the commission
                             structure and what you're looking for in an Agent</label>
-                        <textarea id="agents-detail" name="agents-detail"></textarea>
+                        <textarea id="agents_detail" name="agents_detail"></textarea>
                     </div>
                 </div>
 
                 <div class="sap-form-row full">
                     <div class="sap-form-group">
                         <label for="challenges">Tell us about your current challenges, the problems some of our
-                            consultants will be happy to discuss</label>
+                            consultants will be happy to best_time</label>
                         <textarea id="challenges" name="challenges"></textarea>
                     </div>
                 </div>
@@ -157,6 +159,9 @@
 
                 <button type="submit" class="sap-btn">LET'S TALK</button>
             </form>
+            <div id="successModal" style="display:none;">
+                <p style="text-align: center; padding: 10px; color: black;">✅ Your submission was successful!</p>
+            </div>
         </section>
 
         <!-- Testimonials Section -->
@@ -300,11 +305,32 @@
     </script>
     <script>
         // Form submission handler
-        document.querySelector('.sap-form').addEventListener('submit', function (e) {
+        document.querySelector('.sap-form').addEventListener("submit", function (e) {
             e.preventDefault();
-            alert('Thank you for your interest! We will contact you soon.');
-            this.reset();
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            fetch("../server/sendOpportunity.php", {
+                method: "POST",
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    if (data.includes("success")) {
+                        document.getElementById("successModal").style.display = "block";
+                        form.reset();
+                    } else {
+                        alert("❌ Submission failed. Try again.");
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("❌ Something went wrong.");
+                });
         });
+
+
 
         // Carousel navigation
         const carouselBtns = document.querySelectorAll('.sap-carousel-btn');
