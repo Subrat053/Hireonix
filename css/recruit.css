@@ -1,8 +1,8 @@
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background: linear-gradient(135deg, #f5f5f5 0%, #e8f4f8 50%, #f0e8f8 100%);
-  min-height: 100vh;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  line-height: 1.5;
+  /* background: linear-gradient(135deg, #f5f5f5 0%, #e8f4f8 50%, #f0e8f8 100%); */
+  /* min-height: 100vh; */
 }
 
 .sap-container {
